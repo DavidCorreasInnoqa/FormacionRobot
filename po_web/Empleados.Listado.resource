@@ -4,7 +4,6 @@ Library    SeleniumLibrary
 
 *** Variables ***
 
-
 *** Keywords ***
 Abrir Pagina
     [Documentation]  Abrir la página del listado de empleados
@@ -17,9 +16,10 @@ Abrir Pagina
     Wait Until Element Is Visible  xpath://div[@id='tList_filter']/label/input  20
 
 Filtro Simple
+    [Arguments]     ${filtro}
     Wait Until Element Is Visible  xpath://div[@id='tList_filter']/label/input
-    Input Text  xpath://div[@id='tList_filter']/label/input  Federico
-    Wait Until Element Is Visible  xpath://a[text()='Federico']  20
+    Input Text  xpath://div[@id='tList_filter']/label/input  ${filtro}
+    Wait Until Element Is Visible  xpath://a[text()='${filtro}']  20
 
 Mostrar Registros Por Pagina
 
