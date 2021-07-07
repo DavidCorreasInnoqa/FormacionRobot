@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-
+Library    String
 
 *** Variables ***
 ${USER}        coper
@@ -9,6 +9,10 @@ ${USER}        coper
 ${CMP_USUARIO}    xpath://html/body/app-root/app-auth/nz-layout/nz-sider/div/form/nz-form-item[1]/nz-form-control/div/div/nz-input-group/input
 ${CMP_PASSWORD}    xpath://html/body/app-root/app-auth/nz-layout/nz-sider/div/form/nz-form-item[2]/nz-form-control/div/div/nz-input-group/input
 ${BTN_LOGIN}    id=tg-login-accept
+
+${SLC_CENTRO}    //nz-select
+${ITEM_CENTRO}    //div[text()='{}']
+${BTN_ACCEDER_CENTRO}    id=tg-login-accept
 
 
 *** Keywords ***
@@ -21,6 +25,16 @@ Login
     wait until element is enabled    ${BTN_LOGIN}
     click element    ${BTN_LOGIN}
     CAPTURE PAGE SCREENSHOT
+
+Seleccionar Centro
+    [Arguments]    ${NOMBRE_CENTRO}
+    Wait Until Element Is Visible    ${SLC_CENTRO}
+    Click element    ${SLC_CENTRO}
+    ${ITEM}    String.format string    ${ITEM_CENTRO}    ${NOMBRE_CENTRO}
+    Wait Until Element Is Visible    ${ITEM}
+    Click Element    ${ITEM}
+    Wait Until Element Is Enabled    ${BTN_ACCEDER_CENTRO}
+    Click Element    ${BTN_ACCEDER_CENTRO}
 
 LogOut
     UnSelect Frame

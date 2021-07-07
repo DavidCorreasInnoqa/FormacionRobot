@@ -4,6 +4,7 @@ Library    SeleniumLibrary
 Resource    po_web/Application.resource
 Resource    po_web/Login.resource
 Resource    po_web/Empleados.Listado.resource
+Variables    data/users.py
 
 *** Variables ***
 # Prioridad en las *** variables ***
@@ -21,18 +22,25 @@ Resource    po_web/Empleados.Listado.resource
 
 # KEYWORD CLAVE: Wait Until Keyword Succeeds
 
-${VAR_ESCALAR}    Hola
-@{LISTA}    Hola2    Adios2    Que tal2
-&{DICCIONARIO}    key1=hola    key2=adios    key3=que tal
+#${VAR_ESCALAR}    Hola
+#@{LISTA}    Hola2    Adios2    Que tal2
+#&{DICCIONARIO}    key1=hola    key2=adios    key3=que tal
+#${USER}    javier
 
-${USER}    javier
+${CENTRO}    TraininGym
+${NOM_CENTRO}    Centro Trainingym
+
 
 *** Test Cases ***
 Test-Buscador
     Application.Abrir Navegador
 
     Comment    Hacemos Login
-    Login.Login     Coper   Coper1234
+    Login.Login     ${USUARIO1}[User]   ${USUARIO1}[Password]
+
+    IF    '${USUARIO1}[User]'!='miguel.cervera@innoqa.es'
+        Seleccionar Centro    ${NOM_CENTRO}
+    END
 
     Comment    Accedemos a listado
     Empleados.Listado.Abrir Pagina
