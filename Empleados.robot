@@ -19,6 +19,7 @@ Resource    po_web/Empleados.Listado.resource
 #- Test Case: Accesible en el test Case
 #- Keywords: Accesible unicamente en las keywords
 
+# KEYWORD CLAVE: Wait Until Keyword Succeeds
 
 ${VAR_ESCALAR}    Hola
 @{LISTA}    Hola2    Adios2    Que tal2
@@ -29,7 +30,11 @@ ${USER}    javier
 *** Test Cases ***
 Test-Buscador
     Application.Abrir Navegador
+
+    Comment    Hacemos Login
     Login.Login     Coper   Coper1234
+
+    Comment    Accedemos a listado
     Empleados.Listado.Abrir Pagina
     Empleados.Listado.Filtro Simple     Federico
 
