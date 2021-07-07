@@ -16,6 +16,7 @@ Login
     CAPTURE PAGE SCREENSHOT
 
 LogOut
+    UnSelect Frame
     Wait Until Element Is Visible    xpath://*[@class="ant-avatar ant-avatar-sm ant-avatar-circle ant-avatar-icon ant-dropdown-trigger"]
     capture page screenshot
     Click Element    xpath://*[@class="ant-avatar ant-avatar-sm ant-avatar-circle ant-avatar-icon ant-dropdown-trigger"]

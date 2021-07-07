@@ -15,5 +15,8 @@ Test-Buscador
 
     Empleados.Listado.Abrir Pagina
 
+    Empleados.Listado.Filtro Simple
+
+    Login.Logout
 
 *** Keywords ***
