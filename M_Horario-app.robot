@@ -18,6 +18,6 @@ Horario-Reservas
     Application.Abrir aplicacion
 
     Login.Hacer login con usuario ${USER} y contrasena ${PASSWD}
-    Login.Seleccionar centro ${CENTER}
+#    Login.Seleccionar centro ${CENTER}
 
-#    Application.Cerrar Aplicacion
+    Application.Cerrar Aplicacion
