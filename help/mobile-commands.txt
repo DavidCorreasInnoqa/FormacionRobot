@@ -1,0 +1,41 @@
+Comnados para manejar el emulador
+
+Posible error en windows 10: Puede haber un servicio en el puerto 5037
+- adb devices (Para que el cliente adb rastree todos los puertos a ver si hay algun servidor abierto)
+- netstat -ano
+- kill <pid del proceso ocupando el puerto 5038>  ( TCP    0.0.0.0:5037           0.0.0.0:0              LISTENING       5612)
+- adb devices / start-server (Para empezar el servidor)
+
+
+Procedimiento para hacer una prueba:
+    - Iniciar emulador o dispositivo
+    - Iniciar el adb: adb devices
+        - El dispositivo se debería conectar automáticamente al servidor adb (si es un emulador o si es un dispositivo conectado mediante usb)
+
+    (SOLO HACER LA PRIMERA VEZ)
+        - Instalar el chromedriver según la versión de chrome del dispositivo
+            - Matches: https://raw.githubusercontent.com/appium/appium-chromedriver/master/config/mapping.json
+            - Comando npm: npm install appium-chromedriver --chromedriver_version="<version chrome (2.16)>"
+        - Crear un profile en appium desktop con el chromedriver instalado.
+            - Indicar en "Chromedriver Binary Path" donde se ecuentra el binario (C:\ChromeDrivers\ChromeDriveMobile83\chromedriver.exe)
+
+    - Iniciar el servidor appium con el chromedriver con la versión del dispositivo
+    - Iniciar la prueba mediante el comando "robot"
+
+
+Funcionamiento de una prueba:
+1. Robot framework envia un comando mediante AppiumLibrary.
+2. Appium Library se intenta conectar con el servidor appium (http://localhost:4723/wd/hub)
+3. Servidor appium se comunica mediante adb con el dispositivo.
+
+
+Capabilities inspector de appium (las mismas que Android Local):
+{
+      "automationName": "uiautomator2",
+      "deviceName": "emulator-5554",
+      "platformName": "ANDROID",
+      "noReset": true,
+      "app": "C:\\Users\\DavidCorreas\\PycharmProjects\\FormacionRobot\\apps\\Trainingym App 4.0 - Android.apk",
+      "autoGrandPermissions": true,
+      "autoAcceptAlerts":true
+}

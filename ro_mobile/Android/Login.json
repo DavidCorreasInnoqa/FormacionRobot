@@ -1,0 +1,5 @@
+{
+  "cajaNombre" : "com.Intelinova.TgApp:id/et_login_username",
+  "cajaPassword" : "com.Intelinova.TgApp:id/et_login_password",
+  "btnAcceder" : "com.Intelinova.TgApp:id/btn_login"
+}

@@ -1,0 +1,22 @@
+{
+  "Android": {
+
+    "Local": {
+      "remote_url": "http://localhost:4723/wd/hub",
+      "automationName": "uiautomator2",
+      "deviceName": "emulator-5554",
+      "platformName": "ANDROID",
+      "noReset": true,
+      "app": "C:\\Users\\DavidCorreas\\PycharmProjects\\FormacionRobot\\apps\\Trainingym App 4.0 - Android.apk",
+      "autoGrandPermissions": true,
+      "autoAcceptAlerts":true
+    },
+
+    "Remote": {}
+  },
+
+  "IOS": {
+    "Local": {},
+    "Remote": {}
+  }
+}
