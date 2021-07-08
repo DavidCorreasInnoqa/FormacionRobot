@@ -23,5 +23,37 @@
       "autoAcceptAlerts":true
     }
   },
-  "IOS": {}
+  "IOS": {
+    "Local": {
+      "remote_url":"http://localhost:4723/wd/hub",
+      "deviceName":"iPhone de Miguel Angel",
+      "platformName":"iOS",
+      "udid": "auto",
+      "app":"/Users/miguelangelcervera/PycharmProjects/FormacionRobot/apps/Trainingym.ipa",
+      "automationName":"XCUITest",
+      "autoGrandPermissions":true,
+      "autoAcceptAlerts":true
+    },
+    "Remote Inspector": {
+      "deviceName" : "iPhone 12 Pro",
+      "platformName":"iOS",
+      "platformVersion": "14",
+      "app" : "bs://d84dab18945ffa75733e0d08778c70288ff350ad",
+      "autoGrandPermissions":true,
+      "autoAcceptAlerts":true
+    },
+    "Remote": {
+      "remote_url": "http://hub-cloud.browserstack.com/wd/hub",
+      "app" : "bs://d84dab18945ffa75733e0d08778c70288ff350ad",
+      "browserstack.user" : "davidcorreas1",
+      "browserstack.key" : "swEcTTqMroJ7a4tesZGN",
+      "os_version" : "14",
+      "device" : "iPhone 12 Pro",
+      "project" : "FormacionRobot",
+      "build" : "M_Horario-app",
+      "name" : "first_test",
+      "autoGrandPermissions": true,
+      "autoAcceptAlerts":true
+    }
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "cajaNombre" : "",
-  "cajaPassword" : "",
-  "btnAcceder" : ""
+  "cajaNombre" : "//*[@type = 'XCUIElementTypeTextField']",
+  "cajaPassword" : "//*[@type = 'XCUIElementTypeSecureTextField']",
+  "btnAcceder" : "//*[@name = 'Iniciar sesión']"
 }
