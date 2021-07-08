@@ -6,8 +6,8 @@ Library    po_mobile/Login.py
 
 
 *** Variables ***
-${USER}    coper
-${PASSWORD}    1234abdc
+${USER}    coper111
+${PASSWORD}    1234abcd
 
 *** Test Cases ***
 Horario-App
