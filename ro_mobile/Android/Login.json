@@ -1,0 +1,8 @@
+{
+  "cajaNombre" : "//*[contains(@resource-id,'et_login_username')][not(contains(@resource-id,'layout'))]",
+  "cajaPassword" : "//*[contains(@resource-id,'et_login_password')][not(contains(@resource-id,'layout'))]",
+  "btnAcceder" : "//*[contains(@resource-id,'btn_login')]",
+
+  "chkCentroIncompleto": "//*[contains(@resource-id,'cb_selector')][@text='{}']",
+  "btnConfirmar": "//*[contains(@resource-id,'bt_confirm_selector_center')]"
+}

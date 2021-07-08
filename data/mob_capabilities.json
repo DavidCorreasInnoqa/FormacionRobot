@@ -1,0 +1,27 @@
+{
+  "Android": {
+    "Local": {
+      "remote_url": "http://localhost:4723/wd/hub",
+      "app": "C:\\Users\\DavidCorreas\\PycharmProjects\\FormacionRobot\\apps\\Trainingym App 4.0 - Android.apk",
+      "automationName": "uiautomator2",
+      "deviceName": "emulator-5554",
+      "platformName": "ANDROID",
+      "autoGrandPermissions": true,
+      "autoAcceptAlerts":true
+    },
+    "Remote": {
+      "remote_url": "http://hub-cloud.browserstack.com/wd/hub",
+      "app": "bs://1d66c3028b3f6448bdda3a2d2e78e880cf177724",
+      "browserstack.user" : "davidcorreas1",
+      "browserstack.key" : "swEcTTqMroJ7a4tesZGN",
+      "device" : "Google Pixel 3",
+      "os_version" : "9.0",
+      "project" : "FormacionRobot",
+      "build" : "M_Horario-app",
+      "name" : "first_test",
+      "autoGrandPermissions": true,
+      "autoAcceptAlerts":true
+    }
+  },
+  "IOS": {}
+}
