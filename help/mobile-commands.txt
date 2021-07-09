@@ -39,3 +39,28 @@ Capabilities inspector de appium (las mismas que Android Local):
       "autoGrandPermissions": true,
       "autoAcceptAlerts":true
 }
+
+Ejecutar una prueba en browser stack
+    - https://app-automate.browserstack.com/dashboard/v2/getting-started
+
+Automatizacion en IOS
+- Conectamos el dispositivo
+    - Comprobamos que se ha conectado ejecutando el comando: xcrun xctrace list devices
+- Ejecucion de prueba en IOS
+    - Local: robot -d results -v IS_REMOTE:False -v PLATFORM:IOS M_Horario-app.robot
+    - Remoto (BrowserStack):  robot -d results -v IS_REMOTE:True -v PLATFORM:IOS M_Horario-app.robot
+- Ejecucion de prueba en Android
+    - Local: robot -d results -v IS_REMOTE:False -v PLATFORM:Android M_Horario-app.robot
+    - Remoto (BrowserStack):  robot -d results -v IS_REMOTE:True -v PLATFORM:Android M_Horario-app.robot
+
+- Inspeccionar en browser stack (https://www.browserstack.com/docs/app-automate/appium/integrations/appium-desktop):
+    - Subimos la app mediante curl
+    - Metemos las capabilities en el inspector de appium:
+        "deviceName" : "iPhone 12 Pro",
+        "platformName":"iOS",
+        "platformVersion": "14",
+        "app" : "<response curl (bs://...)>",
+        "autoGrandPermissions":true,
+        "autoAcceptAlerts":true
+    - En el inspector de appium clicamos en "Select cloud providers"
+    - Seleccionamos browser stack y en usuario y contraseña metemos las credenciales que hemos puesto en el curl

@@ -21,12 +21,9 @@ class Application:
             capabilities = json.load(caps)
 
         # Elegir las capabilities
-        is_remote = BuiltIn().get_variable_value("${IS_REMOTE}")
-        if is_remote:
-            current_caps = capabilities["Android"]["Remote"]
-            current_caps["device"] = BuiltIn().get_variable_value("${DEVICE}", "Google Pixel 3")
-        else:
-            current_caps = capabilities["Android"]["Local"]
+        is_remote = "Remote" if BuiltIn().get_variable_value("${IS_REMOTE}") == 'True' else "Local"
+        platform = BuiltIn().get_variable_value("${PLATFORM}")
+        current_caps = capabilities[platform][is_remote]
 
         app_lib.open_application(**current_caps)
 

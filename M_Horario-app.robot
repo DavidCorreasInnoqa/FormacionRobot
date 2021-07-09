@@ -8,7 +8,7 @@ Library    po_mobile/Login.py
 
 *** Variables ***
 ${IS_REMOTE}    False
-${DEVICE}    Samsung Galaxy S9 Plus
+${PLATFORM}    IOS
 ${USER}    sera
 ${PASSWD}    1234abcd
 ${CENTER}    Centro Trainingym

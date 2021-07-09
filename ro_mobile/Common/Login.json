@@ -1,0 +1,5 @@
+{
+  "cajaNombre" : "//*[@name='et_login_username']",
+  "cajaPassword" : "//*[@name='et_login_password']",
+  "btnAcceder" : "//*[@name='btn_login']"
+}
