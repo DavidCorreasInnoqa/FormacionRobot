@@ -1,5 +1,5 @@
 *** Settings ***
-Library    po_web/PoRobotFramework4.py
+Library    ../po_web/PoRobotFramework4.py
 
 *** Variables ***
 

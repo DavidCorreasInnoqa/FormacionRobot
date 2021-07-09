@@ -1,10 +1,10 @@
 *** Settings ***
 # Poner siempre
-Library    functions/PythonPathScript.py
+Library    ../functions/PythonPathScript.py
 # =============
 
-Library    po_mobile/Application.py
-Library    po_mobile/Login.py
+Library    ../po_mobile/Application.py
+Library    ../po_mobile/Login.py
 
 *** Variables ***
 ${IS_REMOTE}    False
