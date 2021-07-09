@@ -7,7 +7,8 @@
       "deviceName": "emulator-5554",
       "platformName": "ANDROID",
       "autoGrandPermissions": true,
-      "autoAcceptAlerts":true
+      "autoAcceptAlerts": true,
+      "newCommandTimeout": 60000
     },
     "Remote": {
       "remote_url": "http://hub-cloud.browserstack.com/wd/hub",
