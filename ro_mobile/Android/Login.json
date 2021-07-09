@@ -1,3 +1,4 @@
 {
-  "cajaNombre" : "//*[contains(@resource-id,'et_login_username')][not(contains(@resource-id,'layout'))]"
+  "cajaNombre" : "//*[contains(@resource-id,'et_login_username')][not(contains(@resource-id,'layout'))]",
+  "slcCentro": "//*[contains(@resource-id,'list_selector_center')]"
 }

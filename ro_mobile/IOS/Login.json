@@ -1,3 +1,4 @@
 {
-  "cajaNombre" : "//*[@name='et_login_username']"
+  "cajaNombre" : "//*[@name='et_login_username']",
+  "slcCentro": "//XCUIElementTypeScrollView"
 }
