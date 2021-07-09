@@ -1,5 +1,9 @@
 {
-  "cajaNombre" : "//*[@name='et_login_username']",
-  "cajaPassword" : "//*[@name='et_login_password']",
-  "btnAcceder" : "//*[@name='btn_login']"
+  "cajaPassword" : "//*[contains(@{0},'et_login_password')][not(contains(@{0},'layout'))]",
+  "btnAcceder" : "//*[contains(@{0},'btn_login')]",
+
+  "chkCentroIncompleto": "//*[contains(@{0},'cb_selector')][@text='{0}']",
+  "btnConfirmar": "//*[contains(@{0},'bt_confirm_selector_center')]",
+
+  "slcCentro": "//*[contains(@{0},'list_selector_center')]"
 }

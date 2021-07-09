@@ -1,6 +1,7 @@
 from AppiumLibrary import AppiumLibrary
 from robot.api.deco import keyword
 from robot.libraries.BuiltIn import BuiltIn
+
 from ro_mobile.Locators import get_locators
 
 app_lib: AppiumLibrary = BuiltIn().get_library_instance("AppiumLibrary")
@@ -19,9 +20,4 @@ class Login:
 
     @keyword(name="Seleccionar centro ${center}")
     def selct_center(self, center):
-        loc_item = self.locators["chkCentroIncompleto"].format(center)
-        app_lib.wait_until_element_is_visible(loc_item)
-        app_lib.click_element(loc_item)
-        app_lib.click_element(self.locators['btnConfirmar'])
-
-
+        app_lib.tg_scroll_dynamic_list(self.locators["slcCentro"], center)

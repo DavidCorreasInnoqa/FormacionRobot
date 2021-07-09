@@ -22,7 +22,7 @@ class Application:
 
         # Elegir las capabilities
         is_remote = "Remote" if BuiltIn().get_variable_value("${IS_REMOTE}") == 'True' else "Local"
-        platform = BuiltIn().get_variable_value("${PLATFORM}")
+        platform = BuiltIn().get_variable_value("${PLATFORM}", "Android")
         current_caps = capabilities[platform][is_remote]
 
         app_lib.open_application(**current_caps)
