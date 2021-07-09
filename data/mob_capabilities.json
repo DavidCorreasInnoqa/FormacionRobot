@@ -9,6 +9,14 @@
       "autoGrandPermissions": true,
       "autoAcceptAlerts":true
     },
+    "Remote Inspector (Inspector appium)": {
+      "automationName": "uiautomator2",
+      "deviceName": "emulator-5554",
+      "platformName": "ANDROID",
+      "app": "C:\\Users\\DavidCorreas\\PycharmProjects\\FormacionRobot\\apps\\Trainingym App 4.0 - Android.apk",
+      "autoGrandPermissions": true,
+      "autoAcceptAlerts": true
+    },
     "Remote": {
       "remote_url": "http://hub-cloud.browserstack.com/wd/hub",
       "app": "bs://1d66c3028b3f6448bdda3a2d2e78e880cf177724",
@@ -34,7 +42,7 @@
       "autoGrandPermissions":true,
       "autoAcceptAlerts":true
     },
-    "Remote Inspector": {
+    "Remote Inspector (Inspector appium)": {
       "deviceName" : "iPhone 12 Pro",
       "platformName":"iOS",
       "platformVersion": "14",
@@ -51,7 +59,7 @@
       "device" : "iPhone 12 Pro",
       "project" : "FormacionRobot",
       "build" : "M_Horario-app",
-      "name" : "first_test",
+      "name" : "first_test_ios",
       "autoGrandPermissions": true,
       "autoAcceptAlerts":true
     }
